@@ -27,24 +27,23 @@ namespace LiteChat
         {
             var client = new MongoClient("mongodb://125.27.10.67:27017");
             var mongo = client.GetDatabase("LiteChat");
-            var db = mongo.GetCollection<userac>("User");
-            var user = new userac();
-            user.user = username.Text;
-            user.password = password.Text;
+            var coll = mongo.GetCollection<BsonDocument>("USER");
 
-            var check = db.Find(b => b.user == username.Text && b.password == password.Text)
-                .ToListAsync()
-                .Result;
-            foreach(var x in check)
+
+            
+            var filter = Builders<BsonDocument>.Filter.Eq("user", username.Text ) ;
+            filter = filter & (Builders<BsonDocument>.Filter.Eq("password", password.Text));
+            var check = coll.Find(filter).Count();
+            
+            if (check>0)
             {
-                Console.WriteLine("---" + x.user);
+                a.Visible = true;
+                Visible = false;
+
             }
-            Console.WriteLine("OK");
-           
-            /*
-            a.Visible = true;
-            Visible = false;
-            */
+            
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,9 +52,5 @@ namespace LiteChat
             x.Visible = true;
         }
     }
-    public class userac
-    {
-        public string user { get; set; }
-        public string password { get; set; }
-    }
+  
 }
