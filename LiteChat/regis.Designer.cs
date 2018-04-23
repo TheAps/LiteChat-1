@@ -35,10 +35,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
+            this.repassword = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -106,33 +107,33 @@
             this.button2.Text = "Upload";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // name
             // 
-            this.textBox1.Location = new System.Drawing.Point(126, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 20);
-            this.textBox1.TabIndex = 7;
+            this.name.Location = new System.Drawing.Point(126, 128);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(123, 20);
+            this.name.TabIndex = 7;
             // 
-            // textBox2
+            // repassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(126, 98);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 20);
-            this.textBox2.TabIndex = 8;
+            this.repassword.Location = new System.Drawing.Point(126, 98);
+            this.repassword.Name = "repassword";
+            this.repassword.Size = new System.Drawing.Size(123, 20);
+            this.repassword.TabIndex = 8;
             // 
-            // textBox3
+            // password
             // 
-            this.textBox3.Location = new System.Drawing.Point(126, 70);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(123, 20);
-            this.textBox3.TabIndex = 9;
+            this.password.Location = new System.Drawing.Point(126, 70);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(123, 20);
+            this.password.TabIndex = 9;
             // 
-            // textBox4
+            // username
             // 
-            this.textBox4.Location = new System.Drawing.Point(126, 44);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(123, 20);
-            this.textBox4.TabIndex = 10;
+            this.username.Location = new System.Drawing.Point(126, 44);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(123, 20);
+            this.username.TabIndex = 10;
             // 
             // pictureBox1
             // 
@@ -150,10 +151,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 361);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.username);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.repassword);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -181,10 +182,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox repassword;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
