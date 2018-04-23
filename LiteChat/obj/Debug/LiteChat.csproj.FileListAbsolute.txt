@@ -118,3 +118,4 @@ C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\bin\Debug\MongoDB.Driver.Core.xm
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\bin\Debug\System.Buffers.xml
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.exe.config
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.csproj.CopyComplete
+C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.Admin.resources
