@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
 namespace LiteChat
 {
@@ -14,6 +16,7 @@ namespace LiteChat
       
     {
         
+
         LiteChat a = new LiteChat();
         public login()
         {
@@ -22,9 +25,26 @@ namespace LiteChat
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            var client = new MongoClient("mongodb://125.27.10.67:27017");
+            var mongo = client.GetDatabase("LiteChat");
+            var db = mongo.GetCollection<userac>("User");
+            var user = new userac();
+            user.user = username.Text;
+            user.password = password.Text;
+
+            var check = db.Find(b => b.user == username.Text && b.password == password.Text)
+                .ToListAsync()
+                .Result;
+            foreach(var x in check)
+            {
+                Console.WriteLine("---" + x.user);
+            }
+            Console.WriteLine("OK");
+           
+            /*
             a.Visible = true;
             Visible = false;
+            */
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -32,5 +52,10 @@ namespace LiteChat
             regis x = new regis();
             x.Visible = true;
         }
+    }
+    public class userac
+    {
+        public string user { get; set; }
+        public string password { get; set; }
     }
 }
