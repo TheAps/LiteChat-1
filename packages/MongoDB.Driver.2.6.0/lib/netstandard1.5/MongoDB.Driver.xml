@@ -14508,7 +14508,7 @@
             Returns a hash code for this instance.
             </summary>
             <returns>
-            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
             </returns>
         </member>
         <member name="M:MongoDB.Driver.PasswordEvidence.ComputeMongoCRPasswordDigest(System.String)">
@@ -14517,11 +14517,6 @@
             </summary>
             <param name="username">The username.</param>
             <returns></returns>
-        </member>
-        <member name="M:MongoDB.Driver.PasswordEvidence.GenerateDigest(System.Security.SecureString)">
-            <summary>
-            Computes the hash value of the secured string 
-            </summary>
         </member>
         <member name="T:MongoDB.Driver.RenderedPipelineDefinition`1">
             <summary>

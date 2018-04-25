@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace LiteChat
 {
     public partial class regis : Form
@@ -52,8 +53,10 @@ namespace LiteChat
                     else
                     {
                         if (!String.IsNullOrEmpty(name.Text))
-                        {
+                        {   
+                            
                             MessageBox.Show("Regised");
+
                         }
                         else
                         {
@@ -62,6 +65,30 @@ namespace LiteChat
                     }
                 }
 
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int size = -1;
+            var result = new OpenFileDialog(); // Show the dialog.
+            var gridfs = new gridfs
+            result.Title = "Browse Your Profile Image";
+            result.Filter = "Image Files (JPG,PNG,GIF)|*.JPG;*.PNG;*.GIF";
+            DialogResult re = result.ShowDialog();
+            if (re==DialogResult.OK) // Test result.
+            {
+                string File = result.FileName;
+                try
+                {
+                    string text = File;
+                    size = text.Length;
+                    Console.WriteLine(text);
+                }
+                catch (System.IO.IOException)
+                {
+
+                }
             }
         }
     }
