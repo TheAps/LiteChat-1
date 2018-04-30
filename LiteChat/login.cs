@@ -17,7 +17,7 @@ namespace LiteChat
     {
         
 
-        LiteChat a = new LiteChat();
+        
         public login()
         {
             InitializeComponent();
@@ -37,6 +37,7 @@ namespace LiteChat
             
             if (check>0)
             {
+                LiteChat a = new LiteChat();
                 a.Visible = true;
                 Visible = false;
 

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,7 @@ namespace LiteChat
 {
     public partial class regis : Form
     {
+        string imgd = "";
         public regis()
         {
             InitializeComponent();
@@ -55,7 +58,26 @@ namespace LiteChat
                         if (!String.IsNullOrEmpty(name.Text))
                         {   
                             
+                            
+                            if (string.IsNullOrEmpty(imgd))
+                            {
+
+                            }
+                            var img = Image.FromFile(imgd);
+                            byte[] imageArray = System.IO.File.ReadAllBytes(imgd);
+                            string image = Convert.ToBase64String(imageArray);
+                            var data = new BsonDocument
+                            {
+                                {"user",username.Text },
+                                {"password",password.Text },
+                                {"name",name.Text },
+                                {"image",image },
+                                {"status","member" }
+                            };
+                            
+                            coll.InsertOneAsync(data);
                             MessageBox.Show("Regised");
+                            this.Visible = false;
 
                         }
                         else
@@ -72,7 +94,7 @@ namespace LiteChat
         {
             int size = -1;
             var result = new OpenFileDialog(); // Show the dialog.
-            var gridfs = new gridfs
+            
             result.Title = "Browse Your Profile Image";
             result.Filter = "Image Files (JPG,PNG,GIF)|*.JPG;*.PNG;*.GIF";
             DialogResult re = result.ShowDialog();
@@ -81,9 +103,12 @@ namespace LiteChat
                 string File = result.FileName;
                 try
                 {
-                    string text = File;
-                    size = text.Length;
-                    Console.WriteLine(text);
+                    imgd = File;
+                    var img = Image.FromFile(imgd);
+                    
+                    pic.BackgroundImage = img;
+                    
+
                 }
                 catch (System.IO.IOException)
                 {

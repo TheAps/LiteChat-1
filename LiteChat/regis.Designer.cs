@@ -39,8 +39,8 @@
             this.repassword = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -136,22 +136,23 @@
             this.username.Size = new System.Drawing.Size(123, 20);
             this.username.TabIndex = 10;
             // 
-            // pictureBox1
+            // pic
             // 
-            this.pictureBox1.BackgroundImage = global::LiteChat.Properties.Resources.Logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 192);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.pic.BackgroundImage = global::LiteChat.Properties.Resources.Logo;
+            this.pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic.Location = new System.Drawing.Point(87, 192);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(100, 100);
+            this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic.TabIndex = 11;
+            this.pic.TabStop = false;
             // 
             // regis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 361);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pic);
             this.Controls.Add(this.username);
             this.Controls.Add(this.password);
             this.Controls.Add(this.repassword);
@@ -168,7 +169,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.regis_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,6 +188,6 @@
         private System.Windows.Forms.TextBox repassword;
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic;
     }
 }
