@@ -73,13 +73,11 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="..\..\..\New folder\LiteChat.cs">
+    <Compile Include="LiteChat.cs">
       <SubType>Form</SubType>
-      <Link>LiteChat.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\New folder\LiteChat.Designer.cs">
+    <Compile Include="LiteChat.designer.cs">
       <DependentUpon>LiteChat.cs</DependentUpon>
-      <Link>LiteChat.Designer.cs</Link>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -98,9 +96,8 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\..\..\New folder\LiteChat.resx">
+    <EmbeddedResource Include="LiteChat.resx">
       <DependentUpon>LiteChat.cs</DependentUpon>
-      <Link>LiteChat.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

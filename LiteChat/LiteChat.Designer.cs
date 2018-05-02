@@ -31,22 +31,23 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pfrined = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.name = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.picpro = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pfrined.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +72,16 @@
             this.pfrined.Name = "pfrined";
             this.pfrined.Size = new System.Drawing.Size(360, 452);
             this.pfrined.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label1.Location = new System.Drawing.Point(3, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Friend List";
             // 
             // button1
             // 
@@ -98,6 +109,39 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Chat";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.picpro);
+            this.panel3.Controls.Add(this.name);
+            this.panel3.Location = new System.Drawing.Point(12, 97);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(360, 69);
+            this.panel3.TabIndex = 0;
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(93, 28);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(35, 13);
+            this.name.TabIndex = 0;
+            this.name.Text = "label2";
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(12, 199);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(360, 350);
+            this.panel4.TabIndex = 0;
+            // 
+            // picpro
+            // 
+            this.picpro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picpro.Location = new System.Drawing.Point(0, 0);
+            this.picpro.Name = "picpro";
+            this.picpro.Size = new System.Drawing.Size(69, 69);
+            this.picpro.TabIndex = 0;
             // 
             // pictureBox3
             // 
@@ -130,40 +174,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.name);
-            this.panel3.Location = new System.Drawing.Point(12, 97);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(360, 69);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(12, 199);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(360, 350);
-            this.panel4.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.Location = new System.Drawing.Point(3, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Friend List";
-            // 
-            // name
-            // 
-            this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(93, 28);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(35, 13);
-            this.name.TabIndex = 0;
-            this.name.Text = "label2";
-            // 
             // LiteChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,11 +196,11 @@
             this.panel2.ResumeLayout(false);
             this.pfrined.ResumeLayout(false);
             this.pfrined.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +220,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Panel picpro;
     }
 }

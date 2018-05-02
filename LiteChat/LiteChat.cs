@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,16 +34,17 @@ namespace LiteChat
 
             var filter = Builders<UserX>.Filter.Eq("user", user);
 
-            var check = coll.Find(x => x.name == user)
+            var check = coll.Find(filter)
                 .ToList();
 
             foreach(UserX x in check)
             {
-
+                name.Text = x.name;
+                picpro.BackgroundImage= Image.FromStream(new MemoryStream(Convert.FromBase64String(x.image)));
             }
             /*
              * 
-             * var img = Image.FromStream(new MemoryStream(Convert.FromBase64String(base64String)));
+             * var img = 
              */
         }
 
@@ -54,7 +56,7 @@ namespace LiteChat
 
     public class UserX
     {
-        public string _id { get; set; }
+        public ObjectId _id { get; set; }
         public string user { get; set; }
         public string password { get; set; }
         public string name { get; set; }
