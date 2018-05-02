@@ -109,7 +109,6 @@ C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\bin\Debug\MongoDB.Driver.xml
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\bin\Debug\MongoDB.Driver.GridFS.xml
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\bin\Debug\System.Buffers.xml
-C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.csprojResolveAssemblyReference.cache
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.exe.config
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.Admin.resources
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.LiteChat.resources
@@ -121,3 +120,4 @@ C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.csproj.CoreCo
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.csproj.CopyComplete
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.exe
 C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.pdb
+C:\Users\Window\Desktop\NoSQL\LiteChat\LiteChat\obj\Debug\LiteChat.csprojResolveAssemblyReference.cache

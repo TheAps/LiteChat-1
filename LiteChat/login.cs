@@ -37,8 +37,11 @@ namespace LiteChat
             
             if (check>0)
             {
-                LiteChat a = new LiteChat();
+                var a = new LiteChat();
+                a.user = username.Text;
+
                 a.Visible = true;
+                a.start();
                 Visible = false;
 
             }
